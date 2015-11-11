@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+a_one:
+  id: 1
+  team_id: 1
+  match_id: 1
+  visitor: true
+
+a_two:
+  id: 2
+  team_id: 2
+  match_id: 1
+  visitor: false
+
+b_one:
+  id: 3
+  team_id: 3
+  match_id: 2
+  visitor: true
+
+b_two:
+  id: 4
+  team_id: 4
+  match_id: 2
+  visitor: false
+
+final_one:
+  id: 5
+  team_id: 1
+  match_id: 3
+  visitor: true
+
+final_one:
+  id: 6
+  team_id: 4
+  match_id: 3
+  visitor: false

@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  name: Petrovich
+
+two:
+  id: 2
+  name: Drunken Sailers
+
+three:
+  id: 3
+  name: Alex
+
+four:
+  id: 4
+  name: Dan
+
+five:
+  id: 5
+  name: Tim
+
+six:
+  id: 6
+  name: Barbie
+
+seven:
+  id: 7
+  name: Brinnie
+
+eight:
+  id: 8
+  name: Petrovich

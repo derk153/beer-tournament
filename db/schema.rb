@@ -11,9 +11,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20151111201222) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "matches", force: :cascade do |t|
+    t.integer  "left_match_id"
+    t.integer  "right_match_id"
+    t.integer  "tournament_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "matches", ["tournament_id"], name: "index_matches_on_tournament_id", using: :btree
+
+  create_table "team_matches", force: :cascade do |t|
+    t.integer  "team_id"
+    t.integer  "match_id"
+    t.boolean  "visitor",    default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "team_matches", ["match_id"], name: "index_team_matches_on_match_id", using: :btree
+  add_index "team_matches", ["team_id"], name: "index_team_matches_on_team_id", using: :btree
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tournaments", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "matches", "matches", column: "left_match_id"
+  add_foreign_key "matches", "matches", column: "right_match_id"
+  add_foreign_key "matches", "tournaments"
+  add_foreign_key "team_matches", "matches"
+  add_foreign_key "team_matches", "teams"
 end

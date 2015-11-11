@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+a1_2:
+  id: 1
+  left_match_id:
+  right_match_id: 
+  tournament_id: 1
+
+b1_2:
+  id: 2
+  left_match_id:
+  right_match_id: 
+  tournament_id: 1
+
+a_final:
+  id: 3
+  left_match_id: 1
+  right_match_id: 2
+  tournament_id: 1
