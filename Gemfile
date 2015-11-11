@@ -13,6 +13,7 @@ gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim-rails'
 gem 'bootstrap-sass'
+gem 'bootstrap-sass-extras'
 gem 'devise'
 gem 'simple_form', github: 'plataformatec/simple_form'
 gem 'awesome_print'

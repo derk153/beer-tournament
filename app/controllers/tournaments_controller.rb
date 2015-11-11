@@ -53,6 +53,6 @@ class TournamentsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def tournament_params
-      params[:tournament]
+      params.require(:tournament).permit(:name)
     end
 end
