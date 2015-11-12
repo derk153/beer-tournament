@@ -30,8 +30,14 @@ final_one:
   match_id: 3
   visitor: true
 
-final_one:
+final_two:
   id: 6
   team_id: 4
   match_id: 3
   visitor: false
+
+vinner:
+  id: 7
+  team_id: 1
+  match_id: 4
+  visitor: true

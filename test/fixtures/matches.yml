@@ -17,3 +17,9 @@ a_final:
   left_match_id: 1
   right_match_id: 2
   tournament_id: 1
+
+vinner:
+  id: 4
+  left_match_id: 3
+  right_match_id: 3
+  tournament_id: 1

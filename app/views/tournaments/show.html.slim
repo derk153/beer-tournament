@@ -14,3 +14,10 @@ div class="page-header"
   = link_to t('.edit', :default => t("helpers.links.edit")), edit_tournament_path(@tournament), :class => 'btn btn-default'
   '
   = link_to t('.destroy', :default => t("helpers.links.destroy")), tournament_path(@tournament), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'
+
+- if @matches_grouped.present?
+  div#match_table
+    - @matches_grouped.each do |level ,matches|
+      div.level
+        - matches.each_with_index do |match, index|
+          = render 'matches/match', match: match, table_styles: match_class(index, level, @matches_grouped.count - 1)

@@ -8,6 +8,8 @@ class TournamentsController < ApplicationController
 
   # GET /tournaments/1
   def show
+    @matches_grouped = @tournament.grouped_matches
+
   end
 
   # GET /tournaments/new
